@@ -3,7 +3,10 @@
 require_once '../includes/DbOperations.php';
 
 $response = array(); 
-
+if(empty($_SERVER['CONTENT_TYPE']))
+{ 
+ $_SERVER['CONTENT_TYPE'] = "application/x-www-form-urlencoded"; 
+}
 if($_SERVER['REQUEST_METHOD']=='POST'){
 	if(isset($_POST['name']) and isset($_POST['password'])){
 		$db = new DbOperations(); 
