@@ -4,7 +4,7 @@
 	$db = new DbOperations(); 
 
 		
-	$notice = $db->getAllFacultyNotice('ALL', 'ALL', 'computer science', 'HOD']);
+	$notice = $db->getAllFacultyNotice('ALL', 'ALL', 'computer science', 'HOD');
 	while($user = mysqli_fetch_assoc($notice)){
 	$response['error'] = false; 
 	$response['datetime'] = $user['datetime'];
